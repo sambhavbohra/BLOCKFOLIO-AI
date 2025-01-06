@@ -30,5 +30,4 @@ function displayLatestListings(data) {
     });
 }
 
-// Fetch and display latest listings on page load
 document.addEventListener('DOMContentLoaded', fetchLatestListings);

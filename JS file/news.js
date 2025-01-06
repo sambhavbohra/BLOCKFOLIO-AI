@@ -47,20 +47,20 @@ function truncateText(text, wordLimit) {
 function startNewsSlider() {
     const newsSlider = document.getElementById('news-slider');
     const newsItems = document.querySelectorAll('.news-item');
-    const slideWidth = newsItems[0].offsetWidth + 10; // Include margin-right
+    const slideWidth = newsItems[0].offsetWidth + 10;
     const totalWidth = slideWidth * newsItems.length;
 
-    newsSlider.style.width = `${totalWidth}px`; // Set total width of the slider
+    newsSlider.style.width = `${totalWidth}px`; 
 
     setInterval(() => {
         currentSlideIndex++;
         if (currentSlideIndex >= newsItems.length) {
-            currentSlideIndex = 0; // Loop back to the start
+            currentSlideIndex = 0; 
         }
 
         const offset = -(currentSlideIndex * slideWidth);
         newsSlider.style.transform = `translateX(${offset}px)`;
-    }, 5000); // Slide every 5 seconds
+    }, 5000); 
 }
 
 function showFallbackMessage() {
