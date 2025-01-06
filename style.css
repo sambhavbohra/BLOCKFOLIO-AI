@@ -49,9 +49,11 @@ h1, h2, h3 {
 }
 
 /* Search Bar */
+
 .container-center-top {
     display: flex;
     align-items: center;
+    gap: 10px;
     background-color: #fff;
     border-radius: 30px;
     padding: 5px 15px;
@@ -64,18 +66,33 @@ h1, h2, h3 {
 .searchbar {
     flex-grow: 1;
     border: none;
-    border-radius: 20px;
     outline: none;
-    background-color: #f0f0f0;
     padding: 8px 12px;
     font-size: 14px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
     transition: background-color 0.3s ease;
+}
+
+.search-btn {
+    background-color: #005cb9;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-btn:hover {
+    background-color: #003e7e;
 }
 
 .searchbar:focus {
     background-color: #fff;
     border: 2px solid #03a9f4;
 }
+
 
 /* Main Content Layout */
 #main-content {
@@ -86,6 +103,12 @@ h1, h2, h3 {
     align-items: stretch; /* Ensure all sections have the same height */
 }
 
+canvas {
+    max-width: 600px;
+    width: 100%;
+    height: 400px;
+}
+
 /* Popular Cryptos Section */
 #popular-markets, #latest-listings {
     flex: 0 0 25%; /* 25% width each */
@@ -93,7 +116,7 @@ h1, h2, h3 {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 600px;  /* Set a fixed height */
+    height: 700px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;  /* Ensure content is evenly spaced */
@@ -132,15 +155,15 @@ h1, h2, h3 {
 
 /* News Section */
 #news {
-    flex: 0 0 40%; /* 50% width */
+    flex: 0 0 40%; 
     padding: 15px;
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 600px;  /* Same fixed height for the news section */
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;  /* Ensure content is evenly spaced */
+    justify-content: space-around;
     overflow: hidden;
 }
 
@@ -171,11 +194,13 @@ h1, h2, h3 {
     max-width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;
+    max-height: 60%;
 }
 
 .news-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #005cb9;
+    margin-bottom: 2%;
 }
 
 .news-item p {

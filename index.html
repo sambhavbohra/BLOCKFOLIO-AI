@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlockFolio AI</title>
     <link rel="icon" href="assests/logo.svg" type="image/svg+xml">
-    <script src="market.js"></script>
-    <script src="news.js"></script>
-    <script src="latest.js"></script>
+    <script src="JS file/market.js" type="module"></script>
+    <script src="JS file/news.js" type="module"></script>
+    <script src="JS file/latest.js" type="module"></script>
+    <script src="JS file/main.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     <header>
         <div class="container">
-            <!-- Left Section: Logo and Title -->
             <div class="container-left">
                 <div class="logo">
                     <img src="assests/logo.svg" alt="Logo" width="40" height="40">
                 </div>
                 <div class="container-left-top">
-                    <h1>BlockFolio AI</h1> <!-- Title next to the logo -->
+                    <h1>BlockFolio AI</h1> 
                 </div>
             </div>
     
-            <!-- Center Section: Search Bar -->
             <div class="container-center">
                 <div class="container-center-top">
                     <img src="assests/searchicon.svg" alt="Search Icon" width="20" height="20">
-                    <input type="text" class="searchbar" placeholder="Search...">
+                    <input type="text" id="search-bar" class="searchbar" placeholder="Search...">
+                    <button id="search-button" class="search-btn" type="button" aria-label="Search">Search</button>
                 </div>
             </div>
     
-            <!-- Right Section: Icons -->
             <div class="container-right">
                 <div class="container-right-top">
                     <img src="assests/dark.svg" alt="Dark Mode Icon" width="30" height="30">
