@@ -1,111 +1,75 @@
-BlockFolio AI
+# BlockFolio AI
 
-Overview
-
+## Overview
 BlockFolio AI is a cryptocurrency tracking application that provides users with the latest updates on cryptocurrencies, including prices, market trends, and predictions. The application uses multiple APIs to fetch and display real-time data and features a clean, responsive design optimized for both desktop and mobile users.
 
-Features
+## Features
 
-1. Cryptocurrency Information
+### 1. Cryptocurrency Information
+- Displays popular and latest cryptocurrency listings in the sidebar.
+- Fetches real-time market data using the **CoinGecko API**.
+- Provides users with key details such as:
+  - Coin name and symbol.
+  - Market rank.
+  - Current price.
+  - Market capitalization.
+  - Circulating supply.
+  - All-time high price.
 
-Displays popular and latest cryptocurrency listings in the sidebar.
+### 2. Latest Crypto News
+- Uses the **CryptoCompare News API** to fetch the latest cryptocurrency-related news.
+- Features a horizontal scrolling slider to display news headlines and summaries.
+- Each news item includes:
+  - Title.
+  - Thumbnail image.
+  - A short description (limited to 50 words).
+  - A link to the full article.
 
-Fetches real-time market data using the CoinGecko API.
+### 3. Search Functionality
+- Users can search for specific cryptocurrencies by entering the coin’s name or ticker symbol in the search bar.
+- Redirects to a dedicated coin dashboard displaying:
+  - Real-time price.
+  - Historical price trends over 5 years (plotted on an interactive graph).
+  - Future price predictions (using time-series analysis or mock data).
+  - Relevant news about the coin.
 
-Provides users with key details such as:
+### 4. Dark and Light Mode Toggle
+- Allows users to switch between dark and light themes for a personalized experience.
 
-Coin name and symbol.
+### 5. Future Enhancements (Planned)
+- Add downloadable reports summarizing historical trends and future predictions.
+- Enhance prediction models using machine learning APIs.
+- Provide additional filters for viewing data (e.g., linear vs logarithmic scales).
 
-Market rank.
+## APIs Used
+1. **CoinGecko API**:
+   - Fetches real-time cryptocurrency prices, market data, and historical charts.
+   - Endpoint: `/coins/{id}/market_chart` for price trends.
 
-Current price.
+2. **CryptoCompare News API**:
+   - Retrieves the latest cryptocurrency news articles.
+   - Endpoint: `/data/v2/news/?lang=EN`.
 
-Market capitalization.
+## Installation and Setup
+### Prerequisites
+- A local development environment with a web server (e.g., **Live Server** in VS Code).
+- An internet connection to fetch live API data.
 
-Circulating supply.
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/blockfolio-ai.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd blockfolio-ai
+   ```
+3. Open the project in your code editor and launch it using **Live Server** or deploy it to a hosting service like **Vercel**.
 
-All-time high price.
+4. Ensure all required dependencies (e.g., `Chart.js`) are included via a CDN or package manager.
 
-2. Latest Crypto News
-
-Uses the CryptoCompare News API to fetch the latest cryptocurrency-related news.
-
-Features a horizontal scrolling slider to display news headlines and summaries.
-
-Each news item includes:
-
-Title.
-
-Thumbnail image.
-
-A short description (limited to 50 words).
-
-A link to the full article.
-
-3. Search Functionality
-
-Users can search for specific cryptocurrencies by entering the coin’s name or ticker symbol in the search bar.
-
-Redirects to a dedicated coin dashboard displaying:
-
-Real-time price.
-
-Historical price trends over 5 years (plotted on an interactive graph).
-
-Future price predictions (using time-series analysis or mock data).
-
-Relevant news about the coin.
-
-4. Dark and Light Mode Toggle
-
-Allows users to switch between dark and light themes for a personalized experience.
-
-5. Future Enhancements (Planned)
-
-Add downloadable reports summarizing historical trends and future predictions.
-
-Enhance prediction models using machine learning APIs.
-
-Provide additional filters for viewing data (e.g., linear vs logarithmic scales).
-
-APIs Used
-
-CoinGecko API:
-
-Fetches real-time cryptocurrency prices, market data, and historical charts.
-
-Endpoint: /coins/{id}/market_chart for price trends.
-
-CryptoCompare News API:
-
-Retrieves the latest cryptocurrency news articles.
-
-Endpoint: /data/v2/news/?lang=EN.
-
-Installation and Setup
-
-Prerequisites
-
-A local development environment with a web server (e.g., Live Server in VS Code).
-
-An internet connection to fetch live API data.
-
-Steps
-
-Clone the repository:
-
-git clone https://github.com/your-repo/blockfolio-ai.git
-
-Navigate to the project directory:
-
-cd blockfolio-ai
-
-Open the project in your code editor and launch it using Live Server or deploy it to a hosting service like Vercel.
-
-Ensure all required dependencies (e.g., Chart.js) are included via a CDN or package manager.
-
-Project Structure
-
+## Project Structure
+```
 blockfolio-ai/
 ├── index.html       # Main landing page
 ├── dashboard.html   # Dedicated coin dashboard page
@@ -120,31 +84,26 @@ blockfolio-ai/
 ├── assets/
 │   └── icons/       # Icons for dark mode, search, etc.
 ├── README.md        # Project documentation
+```
 
-How to Use
+## How to Use
+1. Open the application in your browser.
+2. Browse popular and latest cryptocurrencies in the sidebar.
+3. Read the latest news displayed in the slider.
+4. Use the search bar to search for a cryptocurrency by name or ticker symbol.
+5. View detailed information, graphs, and predictions on the dedicated coin dashboard.
+6. Switch between dark and light modes using the toggle.
 
-Open the application in your browser.
+## Known Issues
+- **API Rate Limits**: Ensure your API keys are valid and respect the rate limits to avoid disruptions.
+- **Mobile Responsiveness**: Some elements may require additional optimization for smaller screens.
 
-Browse popular and latest cryptocurrencies in the sidebar.
+## Future Plans
+- Enhance the predictive models using machine learning APIs.
+- Add more interactive filters and customization options for graphs.
+- Implement a notification system for price alerts.
 
-Read the latest news displayed in the slider.
+---
 
-Use the search bar to search for a cryptocurrency by name or ticker symbol.
+For any issues or feature requests, please open a ticket on the project’s [GitHub repository](https://github.com/your-repo/blockfolio-ai/issues).
 
-View detailed information, graphs, and predictions on the dedicated coin dashboard.
-
-Switch between dark and light modes using the toggle.
-
-Known Issues
-
-API Rate Limits: Ensure your API keys are valid and respect the rate limits to avoid disruptions.
-
-Mobile Responsiveness: Some elements may require additional optimization for smaller screens.
-
-Future Plans
-
-Enhance the predictive models using machine learning APIs.
-
-Add more interactive filters and customization options for graphs.
-
-Implement a notification system for price alerts.
