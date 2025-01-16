@@ -72,15 +72,14 @@ BlockFolio AI is a cryptocurrency tracking application that provides users with 
 ```
 blockfolio-ai/
 ├── index.html       # Main landing page
-├── dashboard.html   # Dedicated coin dashboard page
 ├── css/
 │   └── style.css    # Main stylesheet
 ├── js/
-│   ├── market.js    # Logic for popular and latest crypto markets
+│   ├── market.js    # Logic for popular
 │   ├── news.js      # Handles fetching and displaying news
-│   ├── search.js    # Search functionality logic
-│   ├── dashboard.js # Coin dashboard functionality
-│   └── utils.js     # Utility functions (e.g., API requests)
+│   ├── latest.js    # latest crypto markets
+│   ├── toggle.js    # Toggle script
+│
 ├── assets/
 │   └── icons/       # Icons for dark mode, search, etc.
 ├── README.md        # Project documentation
